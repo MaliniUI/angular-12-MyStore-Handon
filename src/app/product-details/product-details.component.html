@@ -1,6 +1,10 @@
-<div *ngIf="product">
+<div class="col-sm-6 col-md-6">
+  <a [routerLink]="['']">
+    < Back </a>
+      <div *ngIf="product">
 
-  <h3> {{product.name}}</h3>
-  <h2> {{product.price | currency}}</h2>
-  <p> {{product.description}}</p>
+        <h3> {{product.name}}</h3>
+        <h2> {{product.price | currency}}</h2>
+        <p> {{product.description}}</p>
+      </div>
 </div>
