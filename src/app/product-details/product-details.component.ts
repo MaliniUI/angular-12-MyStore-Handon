@@ -9,7 +9,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product!: Product | undefined;
+  product!: any | undefined;
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
@@ -17,8 +17,9 @@ export class ProductDetailsComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert('Product added to cart :' + product.name);
+    console.log('Product added to cart :' + product.name);
   }
+
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
