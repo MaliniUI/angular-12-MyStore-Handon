@@ -5,3 +5,6 @@
     <span>{{item.name}}</span>
     <span>{{item.price}}</span>
   </div>
+  <div *ngIf="items.length == 0">
+    No items in Cart. <a routerLink="/"> Continue Shopping</a>
+  </div>
